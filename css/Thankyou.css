@@ -1,0 +1,122 @@
+/* for navbar Area style */
+
+#navbar>div{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    padding: 0px 20px;
+   background-color:#2874f0;
+
+    
+}
+a{
+ color: white;
+  text-decoration: none;
+}
+a:hover{
+    color: rgb(12, 12, 12);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+
+  #contentarea {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .success-container {
+    text-align: center;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .success-animation {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #4CAF50;
+    position: relative;
+    animation: success-pulse 1s infinite;
+  }
+
+  .success-checkmark {
+    width: 50px;
+    height: 30px;
+    border: 5px solid #fff;
+    border-top: none;
+    border-right: none;
+    transform-origin: bottom left;
+    position: absolute;
+    bottom: 14px;
+    left: 17px;
+    transform: rotate(-45deg);
+    opacity: 0;
+    animation: success-draw 0.5s 0.5s ease forwards;
+  }
+
+  .success-checkmark::before,
+  .success-checkmark::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+  }
+
+  .success-checkmark::before {
+    width: 8px;
+    height: 16px;
+    bottom: 0;
+    left: 0;
+    transform: rotate(45deg);
+  }
+
+  .success-checkmark::after {
+    width: 16px;
+    height: 8px;
+    bottom: 5px;
+    left: 14px;
+    transform: rotate(-45deg);
+  }
+
+  .success-text {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  @keyframes success-pulse {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+
+  @keyframes success-draw {
+    0% {
+      opacity: 0;
+      transform: rotate(-45deg) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: rotate(-45deg) scale(1);
+    }
+  }
