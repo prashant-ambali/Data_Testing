@@ -50,7 +50,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>&copy; 2023 Your Company. All rights reserved.</p>
   </div>
 </body>
-<script src=""></script>
+<script src="">
+  window.dataLayer = window.dataLayer || [];
+
+dataLayer.push({
+ 'event': 'load',
+ 'pagePath': 'https://data-testing.vercel.app/Outbound.html',
+});
+</script>
 </body>
 
 </html>
