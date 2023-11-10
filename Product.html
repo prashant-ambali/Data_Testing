@@ -72,15 +72,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script>
   var dataLayer = window.dataLayer || [];
-  var a = document.querySelector("#fruits_1")
-  a.addEventListener("onclick",function(){
-    alert("yes")
-  })
-
-  a.onclick = () => {
-    alert("yes")
-    dataLayer.push({
-      'event': "click",
+ dataLayer.push({
+      'event': "Click",
       'page_name' : 'Product Page',
       'title' : 'Product Page',
       'page_url' : 'https://data-testing.vercel.app/Product.html',
@@ -88,6 +81,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        'text': 'fruits_2',
       'text' : 'Fruits-2'
     })
-  }
+  
 </script>
 </html>
