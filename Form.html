@@ -77,6 +77,18 @@ dataLayer.push({
   'language' : 'en'
   
 });
+
+   document.querySelector('input').forEach(input=>{
+    input.addEventListener('click',function(){
+     dataLayer.push({
+ 'event': 'FormClick',
+ 'pagePath': 'https://data-testing.vercel.app/Form.html',
+  'page_name' : 'Form Page',
+  'click' : 'Name'
+  
+});
+    }
+   })
     </script>
 </html>
 
