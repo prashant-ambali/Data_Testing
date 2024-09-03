@@ -70,16 +70,22 @@ dataLayer.push({
 });
 
 
-  var clicklink=document.getElementById("axa1")
-    clicklink.onclick(()=>{
+ // Select the element with the ID 'axa1'
+var clickLink = document.getElementById("axa1");
+
+// Define the function to handle the click event
+function handleClick() {
+    // Push the click event data to the dataLayer
     dataLayer.push({
- 'event': 'clickEvent', 
-  'language' : 'en',
-'claim_id' :Math.floor(Math.random() * 900000) + 100000,
-  
-   
-});
-})
+        'event': 'clickEvent',
+        'language': 'en',
+        'claim_id': Math.floor(Math.random() * 900000) + 100000,
+    });
+}
+
+// Add the click event listener to the element
+clickLink.addEventListener('click', handleClick);
+
 </script>
 
 </html>
