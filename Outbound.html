@@ -40,9 +40,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div id="contentarea">
       <div class="link_content">
-        <a href="https://www.google.com" target="_blank">Google Link</a>
-        <a href="https://www.axa.com/" target="_blank">AXA</a>
-        <a href="https://www.youtube.com/" target="_blank">You Tube</a>
+        <a href="https://www.google.com" target="_blank" id ="axa1">Google Link</a>
+        <a href="https://www.axa.com/" target="_blank" id ="axa2">AXA</a>
+        <a href="https://www.youtube.com/" target="_blank" id ="axa3">You Tube</a>
       </div>
     </div>
   </div>
@@ -68,6 +68,18 @@ dataLayer.push({
   
    
 });
+
+
+  var clicklink=dodocument.getElementById("axa1")
+    clicklink.onclick(()=>{
+    dataLayer.push({
+ 'event': 'clickEvent', 
+  'language' : 'en',
+'claim_id' :Math.floor(Math.random() * 900000) + 100000;
+  
+   
+});
+})
 </script>
 
 </html>
