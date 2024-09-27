@@ -30,19 +30,8 @@ _pac.privacyDefaultMode = "no-consent"; -->
   <!-- End Piano SDK configuration -->
 
   <!-- Start cross domain -->
-  <script>
-          window.addEventListener(pa.getVisitorId(), (message) => {
-            if (message === 'https://subdomaindata-testing.vercel.app/') {
-              console.log("message",message)
-              const data = JSON.parse(message);
-               console.log( data)
-             // const { userId } = data;
-              if (data){
-                localStorage.setItem('userId', data);
-              }
-            }
-          });
-      </script>
+    
+
   <!-- End Crossdomain -->
 
   <meta charset="UTF-8" />
@@ -87,6 +76,14 @@ _pac.privacyDefaultMode = "no-consent"; -->
 
 </body>
 <script>
+
+   const dataToSend = { key: "userToken", value: "12345abcde" };
+   // Open a new window or iframe on domain2.com (or an intermediary domain)
+   const targetWindow = window.open('https://subdomaindata-testing.vercel.app/products.html');
+   // Use postMessage to send the data
+   targetWindow.postMessage(dataToSend, 'https://subdomaindata-testing.vercel.app');
+
+  
   //<script src="./scripts/index.js">
   window.dataLayer = window.dataLayer || [];
 
