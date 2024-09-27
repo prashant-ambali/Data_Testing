@@ -81,7 +81,7 @@ _pac.privacyDefaultMode = "no-consent"; -->
    // Open a new window or iframe on domain2.com (or an intermediary domain)
    const targetWindow = window.open('https://subdomaindata-testing.vercel.app/products.html');
    // Use postMessage to send the data
-   targetWindow.postMessage(dataToSend, 'https://subdomaindata-testing.vercel.app');
+   targetWindow.postMessage(dataToSend,'https://subdomaindata-testing.vercel.app');
 
   
   //<script src="./scripts/index.js">
