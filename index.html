@@ -14,6 +14,19 @@
     })(window, document, 'script', 'dataLayer', 'GTM-W4FVT2MZ');</script>
 
   <!-- End Google Tag Manager -->
+<!-- Start cross domain -->
+  <script>
+          window.addEventListener('message', (message) => {
+            if (message.origin === 'https://subdomaindata-testing.vercel.app/') {
+              const data = JSON.parse(message.data);
+              const { userId } = data;
+              if (userId){
+                localStorage.setItem('userId', userId);
+              }
+            }
+          });
+      </script>
+  <!-- End Crossdomain -->
 
   <!-- start Piano SDK configuration -->
   <!-- 
