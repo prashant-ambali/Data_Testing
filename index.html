@@ -16,16 +16,16 @@
   <!-- End Google Tag Manager -->
 
   <!-- start Piano SDK configuration -->
-  <!-- 
-  window._pac = window._pac || {};
+
+<!--   window._pac = window._pac || {};
 _pac.cookieDomain = ".data-testing.vercel.app";
 _pac.privacyDefaultMode = "no-consent"; -->
 
-  <!-- <script
+   <script
   type="text/javascript"
   crossorigin="anonymous"
   src="https://tag.aticdn.net/piano-analytics.js"
-></script>; -->
+></script>;
 
   <!-- End Piano SDK configuration -->
 
@@ -33,9 +33,11 @@ _pac.privacyDefaultMode = "no-consent"; -->
   <script>
           window.addEventListener(pa.getVisitorId(), (message) => {
             if (message === 'https://subdomaindata-testing.vercel.app/') {
+              console.log("message",message)
               const data = JSON.parse(message);
+               console.log( data)
              // const { userId } = data;
-              if (userId){
+              if (data){
                 localStorage.setItem('userId', data);
               }
             }
