@@ -14,19 +14,6 @@
     })(window, document, 'script', 'dataLayer', 'GTM-W4FVT2MZ');</script>
 
   <!-- End Google Tag Manager -->
-<!-- Start cross domain -->
-  <script>
-          window.addEventListener('message', (message) => {
-            if (message.origin === 'https://subdomaindata-testing.vercel.app/') {
-              const data = JSON.parse(message.data);
-              const { userId } = data;
-              if (userId){
-                localStorage.setItem('userId', userId);
-              }
-            }
-          });
-      </script>
-  <!-- End Crossdomain -->
 
   <!-- start Piano SDK configuration -->
   <!-- 
@@ -41,6 +28,20 @@ _pac.privacyDefaultMode = "no-consent"; -->
 ></script>; -->
 
   <!-- End Piano SDK configuration -->
+
+  <!-- Start cross domain -->
+  <script>
+          window.addEventListener(pa.getVisitorId(), (message) => {
+            if (message === 'https://subdomaindata-testing.vercel.app/') {
+              const data = JSON.parse(message);
+             // const { userId } = data;
+              if (userId){
+                localStorage.setItem('userId', data);
+              }
+            }
+          });
+      </script>
+  <!-- End Crossdomain -->
 
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
