@@ -17,9 +17,6 @@
 
   <!-- start Piano SDK configuration -->
 
-<!--   window._pac = window._pac || {};
-_pac.cookieDomain = ".data-testing.vercel.app";
-_pac.privacyDefaultMode = "no-consent"; -->
 
    <script
   type="text/javascript"
@@ -77,9 +74,13 @@ _pac.privacyDefaultMode = "no-consent"; -->
 </body>
 <script>
 
+//    window._pac = window._pac || {};
+// _pac.cookieDomain = ".data-testing.vercel.app";
+// _pac.privacyDefaultMode = "consent";
+
    const dataToSend = { key: "userToken", value: "12345abcde" };
    // Open a new window or iframe on domain2.com (or an intermediary domain)
-   const targetWindow = window.open('https://subdomaindata-testing.vercel.app/products.html');
+   //const targetWindow = window.open('https://subdomaindata-testing.vercel.app/products.html');
    // Use postMessage to send the data
    targetWindow.postMessage(dataToSend,'https://subdomaindata-testing.vercel.app');
 
