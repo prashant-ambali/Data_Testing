@@ -45,6 +45,19 @@
   <!-- End Google Tag Manager (noscript) -->
   <!--    -->
 
+     <iframe id="crossDomainIframe" src="https://subdomaindata-testing.vercel.app/products.html" style="display:none;"></iframe>
+  <script>
+       window.onload = function () {
+         const iframe = document.getElementById('crossDomainIframe');
+         const data = { key: 'userToken', value: 'abc12345' };
+         // Send data to iframe once it has loaded
+         iframe.onload = function () {
+           iframe.contentWindow.postMessage(data, 'https://domain2.com');
+         };
+       };
+     </script>
+
+
   <div class="container">
     <div id="navbar">
       <div id="navbar_content_area">
