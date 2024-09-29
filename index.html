@@ -44,9 +44,9 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!--    -->
-
-     <iframe id="crossDomainIframe" src="https://subdomaindata-testing.vercel.app/products.html" style="display:none;"></iframe>
-
+<iframe id="iframe" src="https://subdomaindata-testing.vercel.app/products.html" onload="onMyFrameLoad()"  style="width:0;height:0;border:none;position:absolute;"></iframe>
+<!--      <iframe id="crossDomainIframe" src="https://subdomaindata-testing.vercel.app/products.html" style="display:none;"></iframe>
+ -->
 
   <div class="container">
     <div id="navbar">
@@ -97,6 +97,7 @@
          //   console.log("after-sendData",data)
          // };
        });
+
    
 
   
