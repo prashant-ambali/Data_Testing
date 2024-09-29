@@ -49,6 +49,7 @@
   <script>
        window.onload = function () {
          const iframe = document.getElementById('crossDomainIframe');
+         console.log("Load")
          const data = { key: 'userToken', value: 'abc12345' };
          // Send data to iframe once it has loaded
          iframe.onload = function () {
