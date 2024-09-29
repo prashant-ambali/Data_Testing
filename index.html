@@ -82,17 +82,21 @@
 // _pac.privacyDefaultMode = "consent";
 
 
-       window.onload = function () {
+       window.addEventListener('load', function (event) {
          const iframe = document.getElementById('crossDomainIframe');
          console.log("Load")
+
+         const wind=iframe.contentWindow
+         
          const data = { key: 'userToken', value: 'abc12345' };
          // Send data to iframe once it has loaded
-         iframe.onload = function () {
-                  console.log("before-sendData",data)
-           iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/');
-           console.log("after-sendData",data)
-         };
-       };
+         wind.postMessage(JSON.stringify(data), '*');
+         // iframe.onload = function () {
+         //          console.log("before-sendData",data)
+         //   iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/');
+         //   console.log("after-sendData",data)
+         // };
+       });
    
 
   
