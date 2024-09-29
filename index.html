@@ -18,11 +18,11 @@
   <!-- start Piano SDK configuration -->
 
 
-   <script
+<!--    <script
   type="text/javascript"
   crossorigin="anonymous"
   src="https://tag.aticdn.net/piano-analytics.js"
-></script>;
+></script>; -->
 
   <!-- End Piano SDK configuration -->
 
@@ -44,7 +44,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!--    -->
-<iframe id="iframe" src="https://subdomaindata-testing.vercel.app/products.html" onload="onMyFrameLoad()"  style="width:0;height:0;border:none;position:absolute;"></iframe>
+<!-- <iframe id="iframe" src="https://subdomaindata-testing.vercel.app/products.html" onload="onMyFrameLoad()"  style="width:0;height:0;border:none;position:absolute;"></iframe> -->
 <!--      <iframe id="crossDomainIframe" src="https://subdomaindata-testing.vercel.app/products.html" style="display:none;"></iframe>
  -->
 
@@ -77,12 +77,12 @@
 </body>
 <script>
 
-   function onMyFrameLoad() {
-    var userId = "Moazzem"
-    var data = {userId: userId};
-    var iframeEl = document.getElementById("iframe");
-    iframeEl.contentWindow.postMessage(JSON.stringify(data), 'https://subdomaindata-testing.vercel.app');
-  };
+  //  function onMyFrameLoad() {
+  //   var userId = "Moazzem"
+  //   var data = {userId: userId};
+  //   var iframeEl = document.getElementById("iframe");
+  //   iframeEl.contentWindow.postMessage(JSON.stringify(data), 'https://subdomaindata-testing.vercel.app');
+  // };
 
 //    window._pac = window._pac || {};
 // _pac.cookieDomain = ".data-testing.vercel.app";
