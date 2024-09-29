@@ -77,26 +77,19 @@
 </body>
 <script>
 
+   function onMyFrameLoad() {
+    var userId = "Moazzem"
+    var data = {userId: userId};
+    var iframeEl = document.getElementById("iframe");
+    iframeEl.contentWindow.postMessage(JSON.stringify(data), 'https://subdomaindata-testing.vercel.app');
+  };
+
 //    window._pac = window._pac || {};
 // _pac.cookieDomain = ".data-testing.vercel.app";
 // _pac.privacyDefaultMode = "consent";
 
 
-       window.addEventListener('load', function (event) {
-         const iframe = document.getElementById('crossDomainIframe');
-         console.log("Load")
-
-         const wind=iframe.contentWindow
-         
-         const data = { key: 'userToken', value: 'abc12345' };
-         // Send data to iframe once it has loaded
-         wind.postMessage(JSON.stringify(data),"*");
-         // iframe.onload = function () {
-         //          console.log("before-sendData",data)
-         //   iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/');
-         //   console.log("after-sendData",data)
-         // };
-       });
+   
 
    
 
