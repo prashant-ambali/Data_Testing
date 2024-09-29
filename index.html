@@ -90,7 +90,7 @@
          
          const data = { key: 'userToken', value: 'abc12345' };
          // Send data to iframe once it has loaded
-         wind.postMessage(JSON.stringify(data), 'https://subdomaindata-testing.vercel.app');
+         wind.postMessage(JSON.stringify(data),"*");
          // iframe.onload = function () {
          //          console.log("before-sendData",data)
          //   iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/');
