@@ -46,19 +46,6 @@
   <!--    -->
 
      <iframe id="crossDomainIframe" src="https://subdomaindata-testing.vercel.app/products.html" style="display:none;"></iframe>
-  <script>
-       window.onload = function () {
-         const iframe = document.getElementById('crossDomainIframe');
-         console.log("Load")
-         const data = { key: 'userToken', value: 'abc12345' };
-         // Send data to iframe once it has loaded
-         iframe.onload = function () {
-                  console.log("before-sendData",data)
-           iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/products.html');
-           console.log("after-sendData",data)
-         };
-       };
-     </script>
 
 
   <div class="container">
@@ -94,11 +81,19 @@
 // _pac.cookieDomain = ".data-testing.vercel.app";
 // _pac.privacyDefaultMode = "consent";
 
-   const dataToSend = { key: "userToken", value: "12345abcde" };
-   // Open a new window or iframe on domain2.com (or an intermediary domain)
-   //const targetWindow = window.open('https://subdomaindata-testing.vercel.app/products.html');
-   // Use postMessage to send the data
-   postMessage(dataToSend,'https://subdomaindata-testing.vercel.app');
+     <script>
+       window.onload = function () {
+         const iframe = document.getElementById('crossDomainIframe');
+         console.log("Load")
+         const data = { key: 'userToken', value: 'abc12345' };
+         // Send data to iframe once it has loaded
+         iframe.onload = function () {
+                  console.log("before-sendData",data)
+           iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/');
+           console.log("after-sendData",data)
+         };
+       };
+     </script>
 
   
   //<script src="./scripts/index.js">
