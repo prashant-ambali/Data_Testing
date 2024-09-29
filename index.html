@@ -52,7 +52,7 @@
          const data = { key: 'userToken', value: 'abc12345' };
          // Send data to iframe once it has loaded
          iframe.onload = function () {
-           iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app/about.html');
+           iframe.contentWindow.postMessage(data, 'https://subdomaindata-testing.vercel.app');
          };
        };
      </script>
