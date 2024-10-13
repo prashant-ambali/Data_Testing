@@ -11,7 +11,7 @@
     
 }
 a{
- color: white;
+ color: rgb(215, 42, 42);
   text-decoration: none;
 }
 a:hover{
@@ -24,7 +24,7 @@ body {
   }
 
   #contentarea {
-    max-width: 400px;
+    max-width: 100%;
     margin: 40px auto;
     padding: 20px;
     background-color: #fff;
@@ -64,4 +64,7 @@ body {
 
   input[type="submit"]:hover {
     background-color: #13e61e;
+  }
+  button{
+    color: red;
   }
