@@ -65,8 +65,8 @@ dataLayer.push({
   'page_name' : 'Form Page',
   'title' : 'Form Page',
   'page_url' : 'https://data-testing.vercel.app/Form.html',
-  'language' : 'en'
-  
+  'language' : 'en',
+  'user_id':226976
 });
 
 //    document.querySelector('input').forEach(input=>{
@@ -82,13 +82,14 @@ dataLayer.push({
 //    })
 
 
-//    document.querySelector('#submit').addEventListener('click',function(){
-//      dataLayer.push({
-//  'event': 'submit',
-//   'click' : 'submit-btn'
+   document.querySelector('#submit').addEventListener('click',function(){
+     dataLayer.push({
+    'event': 'submit',
+    'click' : 'submit',
+      'user_id':226976
   
-// });
-//     }
+});
+    }
    
     </script>
 </html>
